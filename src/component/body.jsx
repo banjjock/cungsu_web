@@ -41,23 +41,22 @@ export function Score() {
 }
 
 export function Quality_prams({pram, category = "none", ppm="ppm"}) {
-    pram = (20*Math.random()+10).toFixed(1);
-    return(
-        <div className="indicator">
-            <span className="label">{category}</span>
-            <div className="divider"></div>
-            <span className="value">{pram}{ppm}</span>
-            <span
-            className="status"
-            style={{
-                backgroundColor:
-                pram > 25 ? "#f44336" : pram < 15 ? "#2196f3" : "#4caf50",
-            }}
-            >
-            {pram > 25 ? "높음" : pram < 15 ? "낮음" : "보통"}
-            </span>
-        </div>
-    )
+  return(
+      <div className="indicator">
+          <span className="label">{category}</span>
+          <div className="divider"></div>
+          <span className="value">{pram}{ppm}</span>
+          <span
+          className="status"
+          style={{
+              backgroundColor:
+              pram > 25 ? "#f44336" : pram < 15 ? "#2196f3" : "#4caf50",
+          }}
+          >
+          {pram > 25 ? "높음" : pram < 15 ? "낮음" : "보통"}
+          </span>
+      </div>
+  )
 }
 
 export function Report() {
